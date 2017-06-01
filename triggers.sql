@@ -1,0 +1,2 @@
+CREATE TRIGGER create_user_cart AFTER INSERT ON customer
+FOR EACH ROW INSERT INTO cart VALUES (NEW.username, NULL, 0);
